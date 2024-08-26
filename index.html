@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <header class="encabezado">
+        <img src="assets/alura_logo.png" alt="">
+    </header>
+    <div class="container__principal">
         <div class="area__texto">
             <textarea name="input__usuario" class="input__usuario" id="input__usuario" cols="30" rows="10"
                 placeholder="Ingrese el texto aquí"></textarea>
@@ -23,12 +26,17 @@
         <div class="resultado">
             <img src="assets/Muñeco.png" alt="Muñeco con lupa" id="monito">
             <div class="texto__inicial" id="texto-inicial">
-                <h1 class="titulo__mensaje" id="titulo-mensaje">Ningún mensaje fue encontrado</h1>
+                <h2 class="titulo__mensaje" id="titulo-mensaje">Ningún mensaje fue encontrado</h2>
                 <p class="mensaje__inicial" id="parrafo-inicial">Ingresa el texto que deseas encriptar o desencriptar</p>
-                <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="mensaje"></textarea>
+                <!-- <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="mensaje">
+                    
+                </textarea> -->
             </div>
         </div>
     </div>
 </body>
+<footer class="pie">
+    <h2 class="texto__pie">Desarrollado por Iván Solarte</h2>
+</footer>
 <script src="app.js"></script>
 </html>

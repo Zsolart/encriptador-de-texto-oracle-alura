@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap);
-
+@import url('https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -63,7 +63,7 @@
     position: absolute;
     width: 80%;
     left: 12%;
-    top: 80%;
+    top: 70%;
 }
 
 .advertencia p {
@@ -86,7 +86,7 @@
     position: absolute;
     width: 80%;
     left: 12%;
-    top: 82%;
+    top: 75%;
 }
 
 .btn__encriptar {
@@ -143,7 +143,7 @@
 }
 
 .btn__desencriptar {
-    /* ... */
+
     transition: all 0.2s ease-in-out;
 }
 
@@ -156,9 +156,9 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    width: 30%;
-    height: 90%;
-    left: 60%;
+    width: 25%;
+    height: 80%;
+    right: 40px;
     top: 5%;
     background: #ffffff;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
@@ -200,9 +200,149 @@
     color: #495057;
 }
 
-.resultado img{
+.resultado img {
     position: absolute;
     width: 85%;
     height: 45%;
     top: 15%;
+}
+
+.pie{
+    width: 100%;
+    font-family:monospace;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 120%;
+    color: #343A40;
+}
+
+.pie h2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    
+}
+
+.encabezado{
+    
+    width: 100%;
+    height: 30%;
+    font-family: var(--fuente-inter);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 120%;
+    color: #0A3871;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    
+}
+
+.encabezado h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    text-align: center;
+}
+
+.encabezado img{
+    position: absolute;
+    width: 4%;
+    height: 3%;
+    margin-bottom:5px;
+    margin-top: 1px;
+
+    
+}
+
+
+
+/* Responsivo */
+@media (max-width: 67.5em) {
+    .container__principal {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .area__texto {
+        width: 100%;
+    }
+
+    .input__usuario {
+        width: 80%;
+        height: 60%;
+        left: 10%;
+        top: 5%;
+    }
+
+    .advertencia {
+        width: 80%;
+        left: 10%;
+        top: 67%;
+    }
+
+    .advertencia p {
+        font-size: 1rem;
+    }
+
+    .botones{
+        width: 80%;
+        left: 10%;
+        top: 70%;
+    }
+
+    .btn__encriptar{
+        width: 48%;
+        border-radius: 16px;
+    }
+
+    .btn__desencriptar{
+        width: 48%;
+        border-radius: 16px;
+    }
+
+    .btn__encriptar:hover,.btn__desencriptar:hover{
+        margin: 0,3%;
+        padding: 1.8%;
+        width: 47.5%;
+    }
+
+    .resultado{
+        width: 80%;
+        height: 15%;
+        left: 10%;
+        top: 80%;
+    }
+
+    .texto__inicial{
+        width: 100%;
+        top: 5%;
+    }
+
+    .resultado img{
+       top:0;
+       display: none; 
+       visibility: hidden;
+    }
+
+    .encabezado h1{
+        width: 100%;
+        top: 5%;
+    }
+
+    .encabezado img {
+        top:0;
+        display: none; 
+        visibility: hidden;
+    }
+    
+
+
+
+
 }

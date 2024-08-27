@@ -26,7 +26,7 @@
 .input__usuario {
     position: absolute;
     width: 42%;
-    height: 60%;
+    height: 55%;
     left: 12%;
     top: 15%;
     border: none;
@@ -37,6 +37,7 @@
     line-height: 150%;
     color: var(--color-secundario);
     background-color: var(--color-primario);
+    resize: none;
 }
 
 .input__usuario::placeholder {
@@ -133,7 +134,7 @@
 }
 
 .btn__encriptar {
-    /* ... */
+    
     transition: all 0.2s ease-in-out;
 }
 
@@ -163,6 +164,7 @@
     background: #ffffff;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
+    
 }
 
 .texto__inicial {
@@ -174,8 +176,10 @@
     gap: 16px;
     position: absolute;
     width: 100%;
-    top: 65%;
+    height: 76%;
+    top: 5%;
     text-align: center;
+    
 }
 
 .texto__inicial h2 {
@@ -187,9 +191,13 @@
     line-height: 120%;
     text-align: center;
     color: #343A40;
+    top: 1%;
+    position: absolute;
+    
 }
 
 .texto__inicial p {
+    max-width: 100%;
     width: 80%;
     font-family: var(--fuente-inter);
     font-style: normal;
@@ -198,13 +206,30 @@
     line-height: 150%;
     text-align: center;
     color: #495057;
+    top: 5%;
+    height: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    word-wrap: break-word; 
+    position: relative;
+    ;
+   
 }
 
 .resultado img {
     position: absolute;
     width: 85%;
     height: 45%;
-    top: 15%;
+    top: 30%;
+}
+
+.resultado p{
+    overflow-y: auto; /* habilita el scrolling vertical */
+    max-width: 100%; /* establece un ancho máximo del 100% */
+    text-align: left; /* alinea el texto a la izquierda */
+    word-wrap: break-word; /* habilita el wrapping de texto */
+
 }
 
 .pie{
@@ -260,6 +285,40 @@
     
 }
 
+.btn__copiar {
+    width: 328px;
+    height: 67px;
+    background-color: var(--color-blue);
+    border-radius: 24px;
+    font-family: var(--fuente-inter);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--color-secundario);
+    line-height: 19px;
+    text-align: center;
+    border: 1px solid var(--color-secundario);
+    transition: all 0.2s ease-in-out;
+    margin-top: 540px;
+    margin-bottom: 32px;
+}
+
+.btn__copiar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.resultado img.ocultar{
+    display: none;
+    visibility: hidden;
+}
+
+
+
+
+   
+
+  
 
 
 /* Responsivo */
@@ -275,15 +334,15 @@
 
     .input__usuario {
         width: 80%;
-        height: 60%;
+        height: 25%; !important
         left: 10%;
-        top: 5%;
+    
     }
 
     .advertencia {
         width: 80%;
         left: 10%;
-        top: 67%;
+        top: 50%;
     }
 
     .advertencia p {
@@ -293,7 +352,7 @@
     .botones{
         width: 80%;
         left: 10%;
-        top: 70%;
+        top: 53%;
     }
 
     .btn__encriptar{
@@ -306,7 +365,7 @@
         border-radius: 16px;
     }
 
-    .btn__encriptar:hover,.btn__desencriptar:hover{
+    .btn__encriptar:hover,.btn__desencriptar:hover,.btn__copiar:hover{
         margin: 0,3%;
         padding: 1.8%;
         width: 47.5%;
@@ -314,9 +373,10 @@
 
     .resultado{
         width: 80%;
-        height: 15%;
+        height: 30%;
         left: 10%;
-        top: 80%;
+        top: 60%;
+        margin-bottom: 20px;
     }
 
     .texto__inicial{
@@ -330,6 +390,14 @@
        visibility: hidden;
     }
 
+    .resultado h2{
+        
+    }
+
+    .resultado p{
+        margin-top: 30px;
+    }
+
     .encabezado h1{
         width: 100%;
         top: 5%;
@@ -340,9 +408,19 @@
         display: none; 
         visibility: hidden;
     }
+
+    .btn__copiar {
+        width: 328px; /* ancho fijo en pixeles */
+        height: 35px;
+        border-radius: 32px;
+        margin-top: 85%;
+
+        }
     
+    .pie {
+            margin-top: 20px;
+            }
 
-
-
+    
 
 }
